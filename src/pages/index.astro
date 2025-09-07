@@ -1,12 +1,196 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import Text from "../components/Text.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
+import sketch from "../assets/images/sketch.png";
 ---
+
 <MainLayout title="Titel">
-	<main class="container mx-auto p-4">
-		<p>Til <Link href="/komponentbibliotek">komponentbiblioteket</Link></p>
-		<Image src={thumbsup} alt=""></Image>
-	</main>
+  <main class="">
+    <!-- <p>Til <Link href="/komponentbibliotek">komponentbiblioteket</Link></p>
+		<Image src={thumbsup} alt=""></Image> -->
+
+    <!-- S E C T I O N   O N E -->
+
+    <section id="Hero" class="bg-[#FFE8EA] min-h-screen w-full text-primary-brown md:pt-10 font-display">
+      <div class="grid grid-cols-1 md:grid-cols-12">
+        <!-- Text block 1 -->
+        <div class="pt-6 pb-6 md:col-start-3 md:col-end-6 place-self-center md:place-self-auto">
+          <h2 class="text-2xl md:text-4xl pb-6">2025</h2>
+          <h1 class="text-8xl md:text-9xl pb-6">Portfolio</h1>
+          <h2 class="text-2xl md:text-4xl pt-9 pb-2 pl-40">Multimediadesigner</h2>
+        </div>
+
+        <!-- Image -->
+        <div class="md:col-start-6 md:col-end-13 md:row-start-1 md:row-end-3 flex items-center justify-center">
+          <img class="max-w-full h-auto md:h-[600px] object-contain" src={sketch.src} alt="sketch" />
+        </div>
+
+        <!-- Text block 2 -->
+        <div class="md:col-start-3 md:col-end-6 md:row-start-2 place-self-center md:place-self-auto">
+          <h2 class="text-4xl pt-2 pb-1">of Josephine</h2>
+          <h2 class="text-4xl pb-12 md:pt-3 md:pl-10">van Rossen</h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- S E C T I O N   A N I M A T I O N -->
+
+    <section class="bg-white p-2">
+      <!-- <p class="text-[#7A5E3F] font-p text-xl">scroll down to learn more about me!</p> -->
+      <Text>scroll down to learn more about me</Text>
+    </section>
+
+    <!-- S E C T I O N   T W O -->
+
+    <section id="About" class="w-full min-h-screen bg-[url('/images/background_stripes.png')] bg-repeat bg-center pt-15">
+      <div class="container mx-auto px-4 py-12">
+        <!-- Content box -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 bg-[#FDF8F3] shadow-lg rounded-xl p-8">
+          <!-- Left column: profile info + image (desktop first, mobile last for image) -->
+          <div class="flex flex-col space-y-4 order-2 md:order-1 md:pl-8 pt-5">
+            <h2 class="text-lg font-p">Age: 21</h2>
+            <h2 class="text-lg font-p">From: Denmark & Holland</h2>
+            <h2 class="text-lg font-p">Design Style: Pastel polka dot princess</h2>
+
+            <!-- Profile image -->
+            <img src="/images/profile.png" alt="Profile photo" class="w-full max-w-xs rounded shadow-md mt-6 mx-auto md:mx-0" />
+          </div>
+
+          <!-- Right column: intro text -->
+          <div class="order-1 md:order-2">
+            <h1 class="text-3xl font-bold text-[#7A5E3F] mb-4 font-display pt-5">Hello!</h1>
+
+            <Text stylingclasses="mb-4 pt-7">Hi, I'm Josephine! I'm a 21-year-old multimedia design student at EK (Copenhagen University of Design and Technology) in Copenhagen. Growing up between cultures—half Danish, half Dutch—and attending international schools in Germany has shaped my global outlook and creative perspective.</Text>
+
+            <Text stylingclasses="text-base">Creativity has always been at the heart of who I am. From drawing and photography to scrapbooking and creating social media content, I've spent my life exploring different artistic outlets. Now, as I delve deeper into the world of multimedia design, I'm excited to combine my love for graphic design and content creation with the technical skills I'm learning at university.</Text>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="Skills" class="w-full min-h-screen bg-[#EAF4FA] py-12 px-6 md:px-16">
+      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
+        <!-- LEFT COLUMN -->
+        <div class="space-y-12">
+          <!-- Design suite -->
+          <div class="text-center md:text-left space-y-4">
+            <h2 class="place-self-center text-xl font-p">Design suite</h2>
+            <img src="/images/adobe_apps.png" alt="Adobe apps" class="place-self-center mx-auto md:mx-0 w-60" />
+          </div>
+
+          <!-- Education -->
+          <div class="space-y-4">
+            <h2 class="text-xl font-p place-self-center md:text-left">Education</h2>
+            <div class="rounded-3xl border border-gray-300 bg-white shadow-sm p-8 space-y-6">
+              <div>
+                <h3 class="font-p font-bold uppercase mb-2">Degrees</h3>
+                <p class="font-p">2011 – 2022 | IB Diploma – International School of Hamburg</p>
+                <p class="font-p">2024 – 2026 | Multimediadesign | KEA Copenhagen School of Design and Technology (Ongoing)</p>
+              </div>
+
+              <div>
+                <h3 class="font-p font-bold uppercase mb-2">Experience within</h3>
+                <ul class="list-disc list-inside space-y-1 font-p">
+                  <li>Adobe Package | Creative Cloud</li>
+                  <li>Visual Studio Code</li>
+                  <li>HTML, CSS and some JavaScript</li>
+                  <li>Photography & editing</li>
+                  <li>Video production & editing</li>
+                  <li>Procreate – illustrations</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div class="space-y-12">
+          <!-- Skills -->
+          <div class="space-y-4">
+            <h2 class="place-self-center text-xl font-p text-center md:text-left">Skills</h2>
+            <div class="rounded-3xl border border-gray-300 bg-white shadow-sm p-6 space-y-6">
+              <div>
+                <p class="font-p text-sm mb-1">Adobe Illustrator</p>
+                <div class="bg-gray-200 h-3 rounded-full">
+                  <div class="bg-[#D1CBB3] h-3 rounded-full w-[90%]"></div>
+                </div>
+              </div>
+              <div>
+                <p class="font-p text-sm mb-1">Procreate</p>
+                <div class="bg-gray-200 h-3 rounded-full">
+                  <div class="bg-[#D1CBB3] h-3 rounded-full w-[75%]"></div>
+                </div>
+              </div>
+              <div>
+                <p class="font-p text-sm mb-1">HTML</p>
+                <div class="bg-gray-200 h-3 rounded-full">
+                  <div class="bg-[#D1CBB3] h-3 rounded-full w-[55%]"></div>
+                </div>
+              </div>
+              <div>
+                <p class="font-p text-sm mb-1">CSS</p>
+                <div class="bg-gray-200 h-3 rounded-full">
+                  <div class="bg-[#D1CBB3] h-3 rounded-full w-[70%]"></div>
+                </div>
+              </div>
+              <div>
+                <p class="font-p text-sm mb-1">Adobe AfterEffects</p>
+                <div class="bg-gray-200 h-3 rounded-full">
+                  <div class="bg-[#D1CBB3] h-3 rounded-full w-[50%]"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Say hi -->
+          <div class="text-center space-y-6">
+            <h2 class="text-4xl font-display text-[#7A5E3F]">Say hi!</h2>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+              <a href="https://www.linkedin.com/in/josephine-van-rossen-923532296/" class="px-6 py-2 rounded-full hover:text-primary-pink bg-primary-pink hover:bg-primary-brown font-p">Linked-in</a>
+              <a href="https://www.instagram.com/josie.v.r/?hl=en" class="px-6 py-2 rounded-full hover:text-primary-pink bg-primary-pink hover:bg-primary-brown font-p">Instagram</a>
+              <a href="https://de.pinterest.com/Mythi1c/" class="px-6 py-2 rounded-full hover:text-primary-pink bg-primary-pink hover:bg-primary-brown font-p">Pinterest</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="Inspo" class="w-full min-h-screen bg-white py-12 px-6 md:px-16">
+      <div class="max-w-6xl mx-auto">
+        <!-- Title -->
+        <h2 class="text-4xl font-display text-[#7A5E3F] text-center mb-12">Inspiration</h2>
+
+        <!-- Grid layout -->
+        <div class="grid grid-cols-1 md:grid-cols-3 items-center gap-8">
+          <!-- Left column -->
+          <div class="flex md:flex-col justify-center items-center gap-8">
+            <a href="#" class="w-24 h-24 flex items-center justify-center rounded-full bg-[#EAF4FA] border border-primary-brown hover:scale-105 transition">
+              <img src="/images/insta.png" alt="Instagram" class="w-10 h-10" />
+            </a>
+            <a href="#" class="w-24 h-24 flex items-center justify-center rounded-full bg-[#EAF4FA] border border-primary-brown hover:scale-105 transition">
+              <img src="/images/music.png" alt="Music" class="w-10 h-10" />
+            </a>
+          </div>
+
+          <!-- Center drawing -->
+          <div class="flex justify-center">
+            <img src="/images/drawing_pic.png" alt="Inspiration drawing" class="max-h-[500px]" />
+          </div>
+
+          <!-- Right column -->
+          <div class="flex md:flex-col justify-center items-center gap-8">
+            <a href="#" class="w-24 h-24 flex items-center justify-center rounded-full bg-[#EAF4FA] border border-primary-brown hover:scale-105 transition">
+              <img src="/images/tumblr.png" alt="Tumblr" class="w-10 h-10" />
+            </a>
+            <a href="#" class="w-24 h-24 flex items-center justify-center rounded-full bg-[#EAF4FA] border border-primary-brown hover:scale-105 transition">
+              <img src="/images/pinterest.png" alt="Pinterest" class="w-10 h-10" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </MainLayout>
